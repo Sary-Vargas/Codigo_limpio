@@ -33,7 +33,7 @@ public class ProcesadorPedidos {
         return idProducto * 10.0; // Simulación de precios
     }
 
-    private void procesarPago(String metodoPago, double total) {
+  private void procesarPago(String metodoPago, double total) {
     switch (metodoPago) {
         case "tarjeta":
             System.out.println("Procesando pago con tarjeta por $" + total);
@@ -45,8 +45,6 @@ public class ProcesadorPedidos {
             throw new IllegalArgumentException("Método de pago no soportado: " + metodoPago);
     }
 }
-
-
     private void enviarConfirmacion(Pedido pedido, double total) {
         System.out.println("📧 Enviando email a: " + pedido.getNombreCliente());
         System.out.println("📦 Dirección de envío: " + pedido.getDireccionCliente());
